@@ -1,0 +1,13 @@
+<section>
+<mat-card class="example-card" *ngFor="let complaint of complaints |async">
+    <mat-card-content routerLink="{{complaint.id}}">
+    <img mat-card-image src="{{complaint.image}}" alt="{{complaint.title}}">
+    <h1>{{complaint.title}}</h1>
+      <p>Posted by {{post.author}} &bull; on {{post.published}}</p>
+    </mat-card-content>
+    <mat-card-actions align="end" *ngIf="auth.currentUserId === complaint.authorId">
+      <button mat-icon-button (click)="delete(complaint.id)"><mat-icon>delete</mat-icon></button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  </section>

@@ -1,0 +1,14 @@
+<div *ngIf="complaints">
+  <h1>{{complaints.title}}</h1>
+  <p>Posted by {{complaints.author}} &bull; {{complaints.published | date: "fullDate"}}</p>
+  <p>{{complaints.content}}</p>
+</div>
+
+<mat-card *ngIf="complaints">
+  <img src="{{complaints.image}}" alt="complaints.title"/>
+  <p>Posted by {{complaints.author}} &bull; {{complaints.published | date: "fullDate"}}</p>
+  <mat-card-content>{{complaints.content}}</mat-card-content>
+  <button mat-icon-button (click)="delete()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-card>

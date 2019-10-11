@@ -1,0 +1,13 @@
+ .spacer {
+    flex: 1 1 auto;
+  }
+  span:focus {
+    outline: none;
+    border: 0;
+  }
+  .mat-toolbar-row, .mat-toolbar-single-row{
+    color: #ffffff;
+  }
+  span{
+      font-size: 15px;
+  }
